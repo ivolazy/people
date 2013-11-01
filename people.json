@@ -1,0 +1,29 @@
+[
+    {
+	"id": "1",
+        "first_name": "John",
+        "last_name": "Doe",
+        "title": "General Manager",
+        "phone": "555-955-8822",
+        "email": "john.doe@agency.gov",
+        "office": "headquarters"
+    },
+    {
+	"id": "2",
+        "first_name": "Jane",
+        "last_name": "Smith",
+        "title": "Policy Liaison",
+        "phone": "555-838-2232",
+        "email": "jane.smith@agency.gov",
+        "office": "western region office"
+    },
+    {
+	"id": "3",
+        "first_name": "Tom",
+        "last_name": "Worth",
+        "title": "Security Lead",
+        "phone": "555-999-2101",
+        "email": "tom.worth@agency.gov",
+        "office": "headquarters"
+    }
+]
