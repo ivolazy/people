@@ -19,22 +19,11 @@
                     "parameters": [
                         {
                             "name": "query",
-                            "description": "a text query to search across facilities",
+                            "description": "a text query to search across people",
                             "required": false,
                             "allowMultiple": false,
                             "dataType": "string",
-                            "paramType": "query",
-                            "applyTo": [
-                                {
-                                    "property": "first_name"
-                                },
-                                {
-                                    "property": "last_name"
-                                },
-                                {
-                                    "property": "title"
-                                }
-                            ]
+                            "paramType": "query"
                         }
                     ],
                     "produces": [
@@ -54,7 +43,7 @@
             "operations": [
                 {
                     "method": "GET",
-                    "summary": "Retrieve a person using its ID",
+                    "summary": "Retrieve a person using their ID",
                     "notes": "Returns a people detail",
                     "type": "people",
                     "nickname": "getOffice",
@@ -64,19 +53,11 @@
                     "parameters": [
                         {
                             "name": "id",
-                            "description": "people id for the office, notice this is in the path, not a query variable",
+                            "description": "id for the person, notice this is in the path, not a query variable",
                             "required": false,
                             "allowMultiple": false,
                             "dataType": "integer",
                             "paramType": "path"
-                        },
-                        {
-                            "name": "callback",
-                            "description": "the callback for API call",
-                            "required": false,
-                            "allowMultiple": false,
-                            "dataType": "string",
-                            "paramType": "query"
                         }
                     ],
                     "responseMessages": [
@@ -100,19 +81,49 @@
                 "id": {
                     "type": "integer"
                 },
-                "first_name": {
+                "name": {
                     "type": "string"
                 },
-                "last_name": {
+                "givenName": {
                     "type": "string"
                 },
-                "title": {
+                "familyName": {
                     "type": "string"
                 },
-                "phone": {
+                "description": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string"
+                },
+                "image": {
+                    "type": "string"
+                },
+                "keywords": {
+                    "type": "string"
+                },
+                "streetAddress": {
+                    "type": "string"
+                },
+                "addressLocality": {
+                    "type": "string"
+                },
+                "addressRegion": {
+                    "type": "string"
+                },
+                "postalCode": {
+                    "type": "string"
+                },
+                "telephone": {
                     "type": "string"
                 },
                 "email": {
+                    "type": "string"
+                },
+                "birthDate": {
+                    "type": "string"
+                },
+                "gender": {
                     "type": "string"
                 }
             }
