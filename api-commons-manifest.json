@@ -3,11 +3,18 @@
         {
             "name": "People",
             "description": "This is a simple API specification for a listing of people.",
-            "url": "https://github.com/ongithub/people/blob/gh-pages/people",
-            "type": "swagger",
             "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-people.png",
-            "keywords": "people, person"
+            "keywords": "people, person",
+            "license": "http://creativecommons.org/licenses/by-sa/3.0/deed.en_US",
+            "attribution": "Kin Lane",
+            "definitions": [
+                {
+                    "type": "swagger",
+                    "url": "https://github.com/ongithub/people/blob/gh-pages/people"
+                }
+            ]
         }
     ],
+    "tags": "api-commons-manifest",
     "updated": "11/03/2013"
 }
