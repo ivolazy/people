@@ -1,0 +1,132 @@
+{
+    "apiVersion": "1.0",
+    "swaggerVersion": "1.2",
+    "basePath": "http://api.1.ongithub.com/ongithub",
+    "resourcePath": "/people",
+    "produces": [
+        "application/json"
+    ],
+    "apis": [
+        {
+            "path": "/people/",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Finds all people",
+                    "notes": "Returns a list of all people, allowing you to filter by state and keyword query.",
+                    "nickname": "getPeople",
+                    "type": "people",
+                    "parameters": [
+                        {
+                            "name": "query",
+                            "description": "a text query to search across people",
+                            "required": false,
+                            "allowMultiple": false,
+                            "dataType": "string",
+                            "paramType": "query"
+                        }
+                    ],
+                    "produces": [
+                        "application/json"
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 404,
+                            "message": "There are no people"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/people/{id}",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Retrieve a person using their ID",
+                    "notes": "Returns a people detail",
+                    "type": "people",
+                    "nickname": "getOffice",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "description": "id for the person, notice this is in the path, not a query variable",
+                            "required": false,
+                            "allowMultiple": false,
+                            "dataType": "integer",
+                            "paramType": "path"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid Application Information ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "People not found"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "models": {
+        "people": {
+            "id": "people",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "givenName": {
+                    "type": "string"
+                },
+                "familyName": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string"
+                },
+                "image": {
+                    "type": "string"
+                },
+                "keywords": {
+                    "type": "string"
+                },
+                "streetAddress": {
+                    "type": "string"
+                },
+                "addressLocality": {
+                    "type": "string"
+                },
+                "addressRegion": {
+                    "type": "string"
+                },
+                "postalCode": {
+                    "type": "string"
+                },
+                "telephone": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "birthDate": {
+                    "type": "string"
+                },
+                "gender": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
