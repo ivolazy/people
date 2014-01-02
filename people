@@ -46,7 +46,7 @@
                     "summary": "Retrieve a person using their ID",
                     "notes": "Returns a people detail",
                     "type": "people",
-                    "nickname": "getOffice",
+                    "nickname": "getPerson",
                     "produces": [
                         "application/json"
                     ],
